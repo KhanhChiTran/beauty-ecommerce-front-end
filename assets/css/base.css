@@ -1,8 +1,13 @@
 :root {
   --primary-color: #f99a8d;
-  --white--color: #fff;
+  --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
+  --border-color: #666464;
+
+  --navbar-height: 36px;
+  --header-height: 120px;
+  --header-with-search-height: calc(var(--header-height)-var(--navbar-height));
 }
 
 * {
@@ -39,6 +44,15 @@ html {
     opacity: 1;
   }
 }
+
+@keyframes growth {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 /* Modal */
 .modal {
   position: fixed;
@@ -47,6 +61,8 @@ html {
   bottom: 0;
   left: 0;
   display: flex;
+  display: none;
+  animation: growth linear 0.1s;
 }
 .modal__overlay {
   position: absolute;
@@ -60,4 +76,23 @@ html {
   margin: auto;
   z-index: 10;
   border-radius: 5px;
+}
+
+.btn {
+  width: fit-content;
+  height: 30px;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  margin: 30px 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn.btn--primary:hover {
+  color: var(--white-color);
+  background-color: #e9e5e5;
+  cursor: pointer;
 }
