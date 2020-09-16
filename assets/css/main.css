@@ -402,3 +402,53 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+/* Cart layout*/
+.header__cart {
+  position: relative;
+}
+
+.header__cart-wrap {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+.header__cart-list {
+  position: absolute;
+  width: 300px;
+  padding-top: 20px;
+  background-color: var(--white-color);
+  border-radius: 3px;
+  font-size: 1.6rem;
+  border: 1px solid #ddd;
+  color: var(--text-color);
+  left: 43px;
+  top: 46px;
+  display: none;
+}
+.header__cart-wrap:hover .header__cart-list {
+  display: block;
+}
+
+.header__cart-list::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  left: 2px;
+  top: -30px;
+  border-width: 20px 30px;
+  border-style: solid;
+  border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__cart-list-btn {
+  margin-top: 20px;
+  padding-top: 20px;
+  background-color: rgb(249, 154, 141, 0.08);
+}
+
+.header__cart-list--no-cart-new {
+  width: 70%;
+  margin: 15px;
+}
