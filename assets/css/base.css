@@ -140,6 +140,7 @@ html {
   padding: 7px;
   color: var(--text-color);
   margin-left: 9px;
+  z-index: 1;
 }
 
 .select-input__icon {
@@ -157,6 +158,7 @@ html {
   list-style: none;
   padding: 8px 16px;
   display: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .select-input__link {
