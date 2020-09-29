@@ -175,3 +175,34 @@ html {
 .select-input:hover .select-input__list {
   display: block;
 }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+}
+
+.pagination-item {
+}
+
+.pagination-item__link {
+  display: block;
+  font-size: 2rem;
+  min-width: 40px;
+  height: 30px;
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 2px;
+  margin: 0 12px;
+  font-weight: 300;
+}
+
+.pagination-item__link--active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
